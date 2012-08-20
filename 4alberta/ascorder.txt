@@ -1,16 +1,16 @@
 Date               ;05/10/11
-First Name         ;Evan
-Last Name          ;Foss
-Address            ;243 Charles Street
-City               ;Boston, MA
+First Name         ;
+Last Name          ;
+Address            ;
+City               ;
 Prov/ST.           ;
-Country            ;United States of America
-PC/ZIP             ;02114-3096
-Company            ;Eaton Peabody Lab
-Area Code          ;617
-Phone              ;573-3749
-Fax                ;720-4408
-Email Address      ;evanfoss@gmail.com
+Country            ;
+PC/ZIP             ;
+Company            ;
+Area Code          ;
+Phone              ;
+Fax                ;
+Email Address      ;
 CAD System         ;gEDA/PCB
 
 Shipping Method    ;FEDEX
