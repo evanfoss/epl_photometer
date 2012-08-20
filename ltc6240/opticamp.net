@@ -1,0 +1,4 @@
+P5V	CONN1-4 U1-7 C3-2 
+GND	U1-4 U1-3 CONN1-3 CONN1-1 C3-1 D1-1 
+unnamed_net2	U1-2 C1-1 D1-2 R1-1 
+unnamed_net1	U1-6 CONN1-2 C1-2 R1-2 

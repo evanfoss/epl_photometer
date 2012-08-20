@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>EPL-Photometer4AnnHickox_and_PingXi -- Sage</title>
+        
+        
+        <link type="text/css" rel="stylesheet" href="print_files/main.css">
+        
+        
+        <script type="text/javascript" src="print_files/jquery-1.js"></script>
+        
+<!-- jQuery UI - interacts, widgets, drag-drop, etc. -->
+<link rel="stylesheet" href="print_files/jquery-ui-1.css">
+<script type="text/javascript" src="print_files/jquery-ui-1.js"></script>
+
+<!-- jQuery plugins - color pickers, shift-click, AJAX forms, IE fixes, notifications -->
+<link rel="stylesheet" href="print_files/farbtastic.css" type="text/css">
+<script type="text/javascript" src="print_files/farbtastic.js"></script>
+<script type="text/javascript" src="print_files/jquery.js"></script>
+<script type="text/javascript" src="print_files/jquery_003.js"></script>
+<script type="text/javascript" src="print_files/jquery_004.js"></script>
+<link rel="stylesheet" href="print_files/jPicker-1.css" type="text/css">
+<script type="text/javascript" src="print_files/jpicker-1.js"></script>
+<link rel="stylesheet" media="screen" type="text/css" href="print_files/colorpicker.css">
+<script type="text/javascript" src="print_files/colorpicker.js"></script>
+<script type="text/javascript" src="print_files/ui.js"></script>
+
+<script type="text/javascript" src="print_files/main.js"></script>
+
+
+<!-- jsMath - typeset mathematics -->
+<script type="text/javascript" src="print_files/jsmath.js"></script><script src="print_files/jsMath-easy-load.js"></script><script src="print_files/jsMath.js"></script>
+
+
+
+<!-- Sage3d - accelerated 3D graphics -->
+<script type="text/javascript" src="print_files/sage3d.js"></script>
+
+<!-- Jmol - embedded 3D graphics -->
+<script type="text/javascript" src="print_files/Jmol.js"></script>
+<!-- This must stay in head -->
+<script>jmolInitialize("/java/jmol");jmolSetCallback("menuFile","/java/jmol/appletweb/SageMenu.mnu");</script>
+
+
+<!-- TinyMCE and jEditable - in-place editing of text cells -->
+<script type="text/javascript" src="print_files/tiny_mce.js"></script>
+<script type="text/javascript" src="print_files/jquery_002.js" charset="utf-8"></script>
+<script type="text/javascript" src="print_files/tinymce.js"></script><script type="text/javascript" src="print_files/en_002.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/langs/en.js',0);"></script><script type="text/javascript" src="print_files/editor_template.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/themes/advanced/editor_template.js',1);"></script><script type="text/javascript" src="print_files/en.js"></script><script type="text/javascript" src="print_files/editor_plugin_002.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/plugins/table/editor_plugin.js',2);"></script><script type="text/javascript" src="print_files/editor_plugin_004.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/plugins/searchreplace/editor_plugin.js',3);"></script><script type="text/javascript" src="print_files/editor_plugin.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/plugins/paste/editor_plugin.js',4);"></script><script type="text/javascript" src="print_files/editor_plugin_003.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://localhost:8000/javascript/tiny_mce/plugins/autosave/editor_plugin.js',5);"></script>
+
+
+<script type="text/javascript">user_name= "guest";</script>
+
+<script type="text/javascript">
+    worksheet_filename = "admin/102";
+    worksheet_name = 'EPL-Photometer4AnnHickox_and_PingXi';
+    server_ping_while_alive();
+</script>
+
+
+
+        
+        
+        
+        <script type="text/javascript" src="print_files/master.js"></script>
+    <style type="text/css">#jsMath_test {font-size:200%}
+</style><style type="text/css">.math {font-family: serif; font-style: normal; font-weight: normal}
+.typeset {font-family: serif; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; white-space: normal}
+.typeset .normal {font-family: serif; font-style: normal; font-weight: normal}
+div.typeset {text-align: center; margin: 1em 0px}
+span.typeset {text-align: left}
+.typeset span {text-align: left; border: 0px; margin: 0px; padding: 0px}
+a .typeset img, .typeset a img {border: 0px; border-bottom: 1px solid blue;}
+.typeset .size0 {font-size: 50%}
+.typeset .size1 {font-size: 60%}
+.typeset .size2 {font-size: 70%}
+.typeset .size3 {font-size: 85%}
+.typeset .size4 {font-size: 100%}
+.typeset .size5 {font-size: 120%}
+.typeset .size6 {font-size: 144%}
+.typeset .size7 {font-size: 173%}
+.typeset .size8 {font-size: 207%}
+.typeset .size9 {font-size: 249%}
+.typeset .cmr10 {font-family: jsMath-cmr10, serif}
+.typeset .cmbx10 {font-family: jsMath-cmbx10, jsMath-cmr10}
+.typeset .cmti10 {font-family: jsMath-cmti10, jsMath-cmr10}
+.typeset .cmmi10 {font-family: jsMath-cmmi10}
+.typeset .cmsy10 {font-family: jsMath-cmsy10}
+.typeset .cmex10 {font-family: jsMath-cmex10}
+.typeset .textit {font-family: serif; font-style: italic}
+.typeset .textbf {font-family: serif; font-weight: bold}
+.typeset .link {text-decoration: none}
+.typeset .error {font-size: 90%; font-style: italic; background-color: #FFFFCC; padding: 1px; border: 1px solid #CC0000}
+.typeset .blank {display: -moz-inline-box; overflow: hidden; border: 0px none; width: 0px; height: 0px}
+.typeset .spacer {}
+#jsMath_hiddenSpan {visibility: hidden; position: absolute; top: 0px; left: 0px; line-height: normal; text-indent: 0px}
+#jsMath_message {position: fixed; bottom: 1px; left: 2px; background-color: #E6E6E6; border: solid 1px #959595; margin: 0px; padding: 1px 8px; z-index: 102; color: black; font-size: small; width: auto}
+#jsMath_panel {position: fixed; bottom: 1.75em; right: 1.5em; padding: .8em 1.6em; background-color: #DDDDDD; border: outset 2px; z-index: 103; width: auto; color: black; font-size: 10pt; font-style: normal}
+#jsMath_panel .disabled {color: #888888}
+#jsMath_panel .infoLink {font-size: 85%}
+#jsMath_panel * {font-size: inherit; font-style: inherit; font-family: inherit; line-height: normal}
+#jsMath_panel div {background-color: inherit; color: inherit}
+#jsMath_panel span {background-color: inherit; color: inherit}
+#jsMath_panel td {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel tr {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel table {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit; height: auto; width: auto}
+#jsMath_button {position:fixed; bottom:1px; right:20px; background-color:white; border: solid 1px #959595; margin:0px; padding: 0px 3px 1px 3px; z-index:102; color:black; text-decoration:none; font-size:x-small; width:auto; cursor:hand;}
+#jsMath_button * {padding: 0px; border: 0px; margin: 0px; line-height: normal; font-size: inherit; font-style: inherit; font-family: inherit}
+#jsMath_global {font-style: italic}
+#jsMath_noFont .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: small; width: auto}
+#jsMath_noFont .link {padding: 0px 5px 2px 5px; border: 2px outset; background-color: #E8E8E8; color: black; font-size: 80%; width: auto; cursor: hand}
+#jsMath_PrintWarning .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: x-small; width: auto}
+@media print {#jsMath_button {display: none}
+#jsMath_Warning {display: none}
+}
+@media screen {#jsMath_PrintWarning {display: none}
+}
+.typeset .scale {font-size: 115%}
+</style><style type="text/css">.typeset .math {font-style: normal}
+.typeset .italic {font-style: italic}
+.typeset .bold {font-weight: bold}
+.typeset .cmr10 {font-family: serif}
+.typeset .cal {font-family: cursive}
+.typeset .arrows {}
+.typeset .arrow1 {}
+.typeset .arrow2 {}
+.typeset .harpoon {font-size: 125%}
+.typeset .symbol {}
+.typeset .symbol2 {}
+.typeset .delim1 {font-size: 133%; position:relative; top:.75em}
+.typeset .delim1b {font-size: 133%; position:relative; top:.8em; margin: -.1em}
+.typeset .delim1c {font-size: 120%; position:relative; top:.8em;}
+.typeset .delim2 {font-size: 180%; position:relative; top:.75em}
+.typeset .delim2b {font-size: 190%; position:relative; top:.8em; margin: -.1em}
+.typeset .delim2c {font-size: 167%; position:relative; top:.8em;}
+.typeset .delim3 {font-size: 250%; position:relative; top:.725em}
+.typeset .delim3b {font-size: 250%; position:relative; top:.8em; margin: -.1em}
+.typeset .delim3c {font-size: 240%; position:relative; top:.775em;}
+.typeset .delim4 {font-size: 325%; position:relative; top:.7em}
+.typeset .delim4b {font-size: 325%; position:relative; top:.8em; margin: -.1em}
+.typeset .delim4c {font-size: 300%; position:relative; top:.8em;}
+.typeset .delim {}
+.typeset .vertical {}
+.typeset .greek {}
+.typeset .igreek {font-style: italic}
+.typeset .bgreek {font-weight: bold}
+.typeset .bigop1 {font-size: 133%; position: relative; top: .85em; margin:-.05em}
+.typeset .bigop1a {font-size: 100%; position: relative; top: .775em;}
+.typeset .bigop1b {font-size: 160%; position: relative; top: .7em; margin:-.1em}
+.typeset .bigop1c {font-size: 125%; position: relative; top: .75em; margin:-.1em;}
+.typeset .bigop2 {font-size: 200%; position: relative; top: .8em; margin:-.07em}
+.typeset .bigop2a {font-size: 175%; position: relative; top: .7em;}
+.typeset .bigop2b {font-size: 270%; position: relative; top: .62em; margin:-.1em}
+.typeset .bigop2c {font-size: 250%; position: relative; top: .7em; margin:-.17em;}
+.typeset .wide1 {font-size: 67%; position: relative; top:-.8em}
+.typeset .wide2 {font-size: 110%; position: relative; top:-.5em}
+.typeset .wide3 {font-size: 175%; position: relative; top:-.32em}
+.typeset .wide1a {font-size: 75%; position: relative; top:-.5em}
+.typeset .wide2a {font-size: 133%; position: relative; top: -.15em}
+.typeset .wide3a {font-size: 200%; position: relative; top: -.05em}
+.typeset .root {}
+.typeset .accent {position: relative; top: .02em}
+.typeset .iaccent {position: relative; top: .02em; font-style: italic}
+.typeset .baccent {position: relative; top: .02em; font-weight: bold}
+</style><style type="text/css">.math {font-family: serif; font-style: normal; font-weight: normal}
+.typeset {font-family: serif; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; white-space: normal}
+.typeset .normal {font-family: serif; font-style: normal; font-weight: normal}
+div.typeset {text-align: center; margin: 1em 0px}
+span.typeset {text-align: left}
+.typeset span {text-align: left; border: 0px; margin: 0px; padding: 0px}
+a .typeset img, .typeset a img {border: 0px; border-bottom: 1px solid blue;}
+.typeset .size0 {font-size: 50%}
+.typeset .size1 {font-size: 60%}
+.typeset .size2 {font-size: 70%}
+.typeset .size3 {font-size: 85%}
+.typeset .size4 {font-size: 100%}
+.typeset .size5 {font-size: 120%}
+.typeset .size6 {font-size: 144%}
+.typeset .size7 {font-size: 173%}
+.typeset .size8 {font-size: 207%}
+.typeset .size9 {font-size: 249%}
+.typeset .cmr10 {font-family: jsMath-cmr10, serif}
+.typeset .cmbx10 {font-family: jsMath-cmbx10, jsMath-cmr10}
+.typeset .cmti10 {font-family: jsMath-cmti10, jsMath-cmr10}
+.typeset .cmmi10 {font-family: jsMath-cmmi10}
+.typeset .cmsy10 {font-family: jsMath-cmsy10}
+.typeset .cmex10 {font-family: jsMath-cmex10}
+.typeset .textit {font-family: serif; font-style: italic}
+.typeset .textbf {font-family: serif; font-weight: bold}
+.typeset .link {text-decoration: none}
+.typeset .error {font-size: 90%; font-style: italic; background-color: #FFFFCC; padding: 1px; border: 1px solid #CC0000}
+.typeset .blank {display: -moz-inline-box; overflow: hidden; border: 0px none; width: 0px; height: 0px}
+.typeset .spacer {}
+#jsMath_hiddenSpan {visibility: hidden; position: absolute; top: 0px; left: 0px; line-height: normal; text-indent: 0px}
+#jsMath_message {position: fixed; bottom: 1px; left: 2px; background-color: #E6E6E6; border: solid 1px #959595; margin: 0px; padding: 1px 8px; z-index: 102; color: black; font-size: small; width: auto}
+#jsMath_panel {position: fixed; bottom: 1.75em; right: 1.5em; padding: .8em 1.6em; background-color: #DDDDDD; border: outset 2px; z-index: 103; width: auto; color: black; font-size: 10pt; font-style: normal}
+#jsMath_panel .disabled {color: #888888}
+#jsMath_panel .infoLink {font-size: 85%}
+#jsMath_panel * {font-size: inherit; font-style: inherit; font-family: inherit; line-height: normal}
+#jsMath_panel div {background-color: inherit; color: inherit}
+#jsMath_panel span {background-color: inherit; color: inherit}
+#jsMath_panel td {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel tr {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit}
+#jsMath_panel table {border: 0px; padding: 0px; margin: 0px; background-color: inherit; color: inherit; height: auto; width: auto}
+#jsMath_button {position:fixed; bottom:1px; right:20px; background-color:white; border: solid 1px #959595; margin:0px; padding: 0px 3px 1px 3px; z-index:102; color:black; text-decoration:none; font-size:x-small; width:auto; cursor:hand;}
+#jsMath_button * {padding: 0px; border: 0px; margin: 0px; line-height: normal; font-size: inherit; font-style: inherit; font-family: inherit}
+#jsMath_global {font-style: italic}
+#jsMath_noFont .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: small; width: auto}
+#jsMath_noFont .link {padding: 0px 5px 2px 5px; border: 2px outset; background-color: #E8E8E8; color: black; font-size: 80%; width: auto; cursor: hand}
+#jsMath_PrintWarning .message {text-align: center; padding: .8em 1.6em; border: 3px solid #DD0000; background-color: #FFF8F8; color: #AA0000; font-size: x-small; width: auto}
+@media print {#jsMath_button {display: none}
+#jsMath_Warning {display: none}
+}
+@media screen {#jsMath_PrintWarning {display: none}
+}
+.typeset .scale {font-size: 115%}
+</style></head>
+    <body id="print-page" class=""><div title="" style="visibility: hidden;" id="jsMath_message"></div><div title=" Open jsMath Control Panel " id="jsMath_button"><span onclick="jsMath.Controls.Panel()">jsMath</span></div><div style="display: none;" id="jsMath_panel"></div><div style="visibility: hidden; position: absolute; top: 0pt; left: 0pt; border: 0pt none; padding: 0pt; margin: 0pt;" id="jsMath_Hidden"></div>
+        
+<h1>EPL-Photometer4AnnHickox_and_PingXi</h1>
+
+
+
+
+    
+
+
+<div class="cell_input_active" id="cell_resizer"></div>
+
+<div class="worksheet_cell_list" id="worksheet_cell_list">
+
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_28" class="cell_visible">
+    <div id="cell_28" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Project: EPL_Photometer
+#By: Evan Foss
+#Date: 2011.09.08
+#Description:
+#Ann needs a photometer that will meter white light as mice perceive it. 
+#Their range is from Green (560nm) to UV (unknown). 
+#The response time is in the 1msec or better.
+#The output voltage is from 0V to 10V peak. 
+#The output must be linear to the light in.
+#
+#Ping needs a photometer that will do basically the same but she needs it to 
+#operate in 474nm to 480nm.
+#
+#Basically the project this worksheet is a spinoff of the one for the 
+#fiber-optic microphone amplifier. Only that project ended before I finished 
+#all the math.&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_28" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_28">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_28">
+                            <div class="cell_output_print_wrap" id="cell_output_28">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_28">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_2" class="cell_visible">
+    <div id="cell_2" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Define some Scale
+femto = 10^(-15)
+pico = 10^(-12)
+nano = 10^(-9)
+micro = 10^(-6)
+mili = 10^(-3)
+deci = 10^(-1)
+Deca = 10^1
+Kilo = 10^3
+Mega = 10^6
+Giga = 10^9&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_2" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_2">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_2">
+                            <div class="cell_output_print_wrap" id="cell_output_2">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_2">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_23" class="cell_visible">
+    <div id="cell_23" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#DAQ Spec.
+#Input Voltage Peek (absolute)
+DAQ_Vpeekabs = 10&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_23" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_23">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_23">
+                            <div class="cell_output_print_wrap" id="cell_output_23">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_23">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_3" class="cell_visible">
+    <div id="cell_3" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Diode Model (TEMD6010FX01)
+#diode capacitance varies on model but 15pF would seem to be the max.
+D1photo_C = 60*pico
+#Peek Current
+D1photo_Ipeek = 3*micro
+#What is the 
+D1photo_Itypical = 300*nano&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_3" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_3">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_3">
+                            <div class="cell_output_print_wrap" id="cell_output_3">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_3">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_5" class="cell_visible">
+    <div id="cell_5" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#opamp spec. (LT1793)
+#current noise (it will actually be less than this because this is at 1KHz)
+U1OpAmp_InInoise = 1*femto
+#Gain Bandwidth Product
+U1OpAmp_GBW = 4.7*Mega
+#What is the common mode input capacitance
+U1OpAmp_InCcom = 1.5*pico
+#Supply Current
+U1OpAmp_Isupply = 4.2*mili
+#What is the max voltage the opamp can deliver?
+#This is not the true max. output voltage only the most I want to use to limit total harmonic distortion.
+U1OpAmp_OutVmax = 2.75&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_5" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_5">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_5">
+                            <div class="cell_output_print_wrap" id="cell_output_5">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_5">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_43" class="cell_visible">
+    <div id="cell_43" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#opamp spec. U2 (LF356)
+#Gain Bandwidth Product
+U2OpAmp_GBW = 5*Mega
+#Input Capacitance
+U2OpAmp_Cinput = 3*pico
+#Supply Current
+U2OpAmp_Isupply = 5*mili&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_43" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_43">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_43">
+                            <div class="cell_output_print_wrap" id="cell_output_43">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_43">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_15" class="cell_visible">
+    <div id="cell_15" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#What is the minimum target bandwidth of the whole amplifier?
+Responce_time_min = 1*mili
+BW_min = 1/Responce_time_min
+#BW = 30*Kilo
+BW = BW_min*(5+1/3)
+print "Band Width (min) =", float(BW_min/Kilo), "KHz"
+print "Band Width (target) =", float(BW/Kilo), "KHz"
+#What is the amount of gain required for optimal performance in the first stage?
+U1OpAmp_ClosedLGain = U1OpAmp_OutVmax / D1photo_Ipeek
+print "What is the ideal transimpedance gain =", float(U1OpAmp_ClosedLGain)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_15" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_15">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_15">
+                            <div class="cell_output_print_wrap" id="cell_output_15">
+                                
+                                    <pre class="shrunk">Band Width (min) = 1.0 KHz
+Band Width (target) = 5.33333333333 KHz
+What is the ideal transimpedance gain = 916666.666667</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_15">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_7" class="cell_visible">
+    <div id="cell_7" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#what is the impedance inside the photodiode (and opamp inputs) at that level?
+Input_CreactanceBW = 1/(2*pi*BW*(D1photo_C + U1OpAmp_InCcom))
+print "Input Reactance at 3DB point =", float(Input_CreactanceBW), ""&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_7" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_7">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_7">
+                            <div class="cell_output_print_wrap" id="cell_output_7">
+                                
+                                    <pre class="shrunk">Input Reactance at 3DB point = 485228.485036 </pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_7">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_6" class="cell_visible">
+    <div id="cell_6" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#so the output voltage noise will be...
+U1OpAmp_OutVnoise = U1OpAmp_InInoise * Input_CreactanceBW
+print "Projected noise from opamp input current noise and photo diode reactance =", float(U1OpAmp_OutVnoise/nano), "nV"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_6" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_6">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_6">
+                            <div class="cell_output_print_wrap" id="cell_output_6">
+                                
+                                    <pre class="shrunk">Projected noise from opamp input current noise and photo diode
+reactance = 0.485228485036 nV</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_6">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_8" class="cell_visible">
+    <div id="cell_8" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">print "That should be around 0.8fA/sqrt(Hz) which matches the LT1793 data sheet."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_8" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_8">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_8">
+                            <div class="cell_output_print_wrap" id="cell_output_8">
+                                
+                                    <pre class="shrunk">That should be around 0.8fA/sqrt(Hz) which matches the LT1793 data
+sheet.</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_8">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_54" class="cell_visible">
+    <div id="cell_54" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">print "I do not like actually using 916KOhms because using parallel resistors will add parallel copper on the PCB."
+print "The extra trace capacitance from that would further limit the size of the feedback resistor."
+print "I know that going up to 1MOhm will only be a small change."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_54" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_54">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_54">
+                            <div class="cell_output_print_wrap" id="cell_output_54">
+                                
+                                    <pre class="shrunk">I do not like actually using 916KOhms because using parallel
+resistors will add parallel copper on the PCB.
+The extra trace capacitance from that would further limit the size
+of the feedback resistor.
+I know that going up to 1MOhm will only be a small change.</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_54">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_11" class="cell_visible">
+    <div id="cell_11" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#What is the feedback resistor for the first stage?
+R1_feedback = 1*Mega
+C1_feedback = sqrt((D1photo_C + U1OpAmp_InCcom) / (U1OpAmp_GBW*2*pi*R1_feedback))
+print "The feedback capacitor should be =", float(C1_feedback/pico), "pF"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_11" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_11">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_11">
+                            <div class="cell_output_print_wrap" id="cell_output_11">
+                                
+                                    <pre class="shrunk">The feedback capacitor should be = 1.44310753644 pF</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_11">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_12" class="cell_visible">
+    <div id="cell_12" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Only that calculation is rubbish because I will likely get at least 1pF from the artwork on the PCB. 
+#This means that I will have to use less feedback resistance and more feedback capacitance. 
+#The above work will have to be redone using Cfeeback as the limiting factor for Rfeedback and not the 
+#other way around.&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_12" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_12">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_12">
+                            <div class="cell_output_print_wrap" id="cell_output_12">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_12">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_19" class="cell_visible">
+    <div id="cell_19" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Now that we know C_feedback needs to be the limiting factor what should it be...
+#I am going to figure the board to have &lt; 5pF of capacitance and I know that the 
+#smallest value capacitor I can get in decent tolerance is 4.7pF.
+C1_feedback = 1.5*pico
+#Now a little algerbra
+#C_feedback = sqrt(Dphoto_C / (OpAmp_GBW*2*pi*R_feedback))
+#C_feedback^2 = Dphoto_C / (OpAmp_GBW*2*pi*R_feedback)
+#C_feedback^2 / Dphoto_C = 1 / OpAmp_GBW*2*pi*R_feedback
+#(C_feedback^2 * OpAmp_GBW*2*pi) / Dphoto_C = 1 / R_feedback
+#R_feedback = Dphoto_C / (C_feedback^2 * OpAmp_GBW*2*pi)
+R1_feedback = (D1photo_C + U1OpAmp_InCcom) / (C1_feedback^2 * U1OpAmp_GBW*2*pi)
+print "The largest Rfeedback can be is =", float(R1_feedback/Kilo), "KOhms"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_19" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_19">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_19">
+                            <div class="cell_output_print_wrap" id="cell_output_19">
+                                
+                                    <pre class="shrunk">The largest Rfeedback can be is = 925.581938549 KOhms</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_19">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_36" class="cell_visible">
+    <div id="cell_36" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#The ideal feedback resistor is just a little off from what is actually available.
+R1_feedback = 1*Mega&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_36" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_36">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_36">
+                            <div class="cell_output_print_wrap" id="cell_output_36">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_36">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_33" class="cell_visible">
+    <div id="cell_33" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#With the feedback 
+resistor and feedback capacitor worked out I can calculate the peek 
+output voltage for the transimpedance stage.
+V_transimpedancePeek = D1photo_Ipeek*R1_feedback
+print "Voltage out of Transimpedance (@peek) =", 
+float(V_transimpedancePeek), "V"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_33" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_33">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_33">
+                            <div class="cell_output_print_wrap" id="cell_output_33">
+                                
+                                    <pre class="shrunk">Voltage out of Transimpedance (@peek) = 3.0 V</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_33">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_34" class="cell_visible">
+    <div id="cell_34" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#What is the ideal gain for the output amplifier?
+U2OpAmp_ClosedLGain = (DAQ_Vpeekabs / V_transimpedancePeek)
+print "Gain (stage2) =", float(U2OpAmp_ClosedLGain)&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_34" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_34">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_34">
+                            <div class="cell_output_print_wrap" id="cell_output_34">
+                                
+                                    <pre class="shrunk">Gain (stage2) = 3.33333333333</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_34">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_37" class="cell_visible">
+    <div id="cell_37" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#What is the ideal input resistor for the second stage.
+#I always prefer to add 1/3rd to the output resistor to reduce the current output from the transimpedance stage.
+R2_input = (V_transimpedancePeek / U2OpAmp_Isupply)*(1+1/3)
+print "Input resistor ideal (2ndstage) =", float(R2_input), "Ohms"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_37" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_37">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_37">
+                            <div class="cell_output_print_wrap" id="cell_output_37">
+                                
+                                    <pre class="shrunk">Input resistor ideal (2ndstage) = 800.0 Ohms</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_37">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_38" class="cell_visible">
+    <div id="cell_38" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Heck with that I am just going to round it up...
+R2_input = 1*Kilo
+print "Input resistor (2ndstage) =", float(R2_input/Kilo), "KOhms"
+#What is the ideal feedback resistor
+R3_feedback = U2OpAmp_ClosedLGain * R2_input
+print "Feedback resistor ideal (2ndstage) =", float(R3_feedback/Kilo), "KOhms"
+R3_feedback = 3.32*Kilo
+print "Feedback resistor selected (2ndstage) =", float(R3_feedback/Kilo), "KOhms"&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_38" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_38">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_38">
+                            <div class="cell_output_print_wrap" id="cell_output_38">
+                                
+                                    <pre class="shrunk">Input resistor (2ndstage) = 1.0 KOhms
+Feedback resistor ideal (2ndstage) = 3.33333333333 KOhms
+Feedback resistor selected (2ndstage) = 3.32 KOhms</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_38">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_39" class="cell_visible">
+    <div id="cell_39" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Will this combination come close to the target output at full scale?
+U2_VOutPeek = V_transimpedancePeek * (R3_feedback / R2_input)
+print "What is the peek voltage output (2ndstage) =", float(U2_VOutPeek), "V"
+print "That should give a fair amount of leeway for the resistor tolerances."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_39" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_39">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_39">
+                            <div class="cell_output_print_wrap" id="cell_output_39">
+                                
+                                    <pre class="shrunk">What is the peek voltage output (2ndstage) = 9.96 V
+That should give a fair amount of leeway for the resistor
+tolerances.</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_39">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_40" class="cell_visible">
+    <div id="cell_40" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#U2 source capacitance (assumed to mostly be from board impedance)
+U2OpAmp_CSource = 1.5*pico
+#What is the frequency of the pole formed by U2's input capacitence
+U2OpAmp_Rparallel = (R3_feedback * R2_input) / (R3_feedback + R2_input)
+U2OpAmp_Fpole = 1 / (2 * pi * U2OpAmp_CSource * U2OpAmp_Rparallel)
+print "U2 frequency pole (Uncompensated) =", float(U2OpAmp_Fpole/Mega), "MHz"
+if (U2OpAmp_Fpole &lt; 6 * BW) :
+    print "You should add a feedback capacitor to U2."
+if (U2OpAmp_Fpole &lt;= 10 * BW and U2OpAmp_Fpole &gt;= 6 * BW) :
+    print "You may consider adding a feedback capacitor to U2."
+if (U2OpAmp_Fpole &gt; 10 * BW) :
+    print "You probably do not need a feedback capacitor."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_40" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_40">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_40">
+                            <div class="cell_output_print_wrap" id="cell_output_40">
+                                
+                                    <pre class="shrunk">U2 frequency pole (Uncompensated) = 138.062119309 MHz
+You probably do not need a feedback capacitor.</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_40">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_44" class="cell_visible">
+    <div id="cell_44" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Low frequency noise gain
+#The following is from the LMC662 datasheet
+U2OpAmp_GainLowFrequency = 1 + R3_feedback / R2_input&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_44" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_44">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_44">
+                            <div class="cell_output_print_wrap" id="cell_output_44">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_44">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_45" class="cell_visible">
+    <div id="cell_45" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">#Theoretical feedback capacitor
+if (U2OpAmp_GainLowFrequency &gt;=  2*sqrt(U2OpAmp_GBW * R3_feedback * (U2OpAmp_CSource + U2OpAmp_Cinput))) : 
+    C2_feedback = (U2OpAmp_CSource + U2OpAmp_Cinput) / (2 * (1 + R3_feedback / R2_input))
+if (U2OpAmp_GainLowFrequency &lt;  2*sqrt(U2OpAmp_GBW * R3_feedback * (U2OpAmp_CSource + U2OpAmp_Cinput))) : 
+    C2_feedback = sqrt((U2OpAmp_Csource + U2OpAmp_Cinput) / (U2_GBW * R3_feedback))
+if (C2_feedback &gt;= 10*pico or U2OpAmp_Fpole &lt;= 6 * BW) :
+    print "U2 feedback capacitor =", float(C2_feedback/pico), "pF"
+if (C2_feedback &lt; 10*pico and U2OpAmp_Fpole &gt; 10) :
+    print "C2 (feedback capacitor on U2) is not needed but remember the reference designator C2 is reserved."&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_45" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_45">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_45">
+                            <div class="cell_output_print_wrap" id="cell_output_45">
+                                
+                                    <pre class="shrunk">C2 (feedback capacitor on U2) is not needed but remember the
+reference designator C2 is reserved.</pre>
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_45">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_52" class="cell_visible">
+    <div id="cell_52" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_52" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_52">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_52">
+                            <div class="cell_output_print_wrap" id="cell_output_52">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_52">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_53" class="cell_visible">
+    <div id="cell_53" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_53" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_53">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_53">
+                            <div class="cell_output_print_wrap" id="cell_output_53">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_53">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+    
+
+    
+    
+
+
+
+
+<div id="cell_outer_55" class="cell_visible">
+    <div id="cell_55" class="cell_evaluated">
+
+        
+        
+        
+            
+                
+            
+            
+                <div class="cell_input_print">&nbsp;</div>
+            
+            
+
+            <div id="introspect_div_55" class="introspection"></div>
+        
+
+        
+        
+        <div class="cell_output_div">
+            <table class="cell_output_box">
+                <tbody><tr>
+                    <td class="cell_number" id="cell_number_55">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td class="output_cell">
+                        <div class="cell_div_output_wrap" id="cell_div_output_55">
+                            <div class="cell_output_print_wrap" id="cell_output_55">
+                                
+                                    
+                                
+                            </div>
+                            
+                                <div class="cell_output_html_wrap" id="cell_output_html_55">
+                                    
+                                </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+    </div>
+</div>
+
+
+
+
+
+    
+</div></body></html>

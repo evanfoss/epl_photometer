@@ -1,0 +1,4 @@
+elements-dir ./foot
+schematics transimpedance.sch
+output-name opticamp
+gsch2pcb:use-m4:            yes
