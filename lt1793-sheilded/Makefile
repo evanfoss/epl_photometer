@@ -66,11 +66,16 @@ GRAPHFLAGS_GNUPLOT = -persist
 ## Schematic to PCB Tool
 SCH2PCBTOOL = gsch2pcb
 # 
-# PCB Tool
+## PCB Tool
 PCBTOOL = pcb
 #
-# Gerber Viewer
+## Gerber Viewer
 PCBVIEW = gerbv
+#
+## BOM Generation tool
+BOMTOOL = pcb
+BOMFLAGS = -x bom
+
 
 all:
 	$(TEXTEDITOR) Makefile
@@ -98,6 +103,9 @@ pcb:    sch2pcb
 
 gerbv:
 	$(PCBVIEW) $(PCBVIEWFLAGS) $(GERBERS)
+
+bom:
+	$(BOMTOOL) $(BOMFLAGS) $(PCBS)
 
 alberta:
 	mv $(NAME).frontsilk.gbr cslk.gbr
