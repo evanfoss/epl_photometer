@@ -31,9 +31,9 @@ refdes=C1
 T 48300 49200 5 10 0 0 0 0 1
 symversion=0.1
 T 48700 49000 5 10 1 1 0 0 1
-value=1.5pF
+value=2.7pF
 T 48600 48800 5 10 1 1 0 3 1
-comment=Board Capacitence
+footprint=0805
 }
 C 44400 41700 1 0 0 gnd-1.sym
 N 48100 48500 44500 48500 4
