@@ -1,16 +1,17 @@
 # $Id$
 # PcbBOM Version 1.0
-# Date: Wed Aug 22 19:00:27 2012 UTC
+# Date: Wed Aug 22 21:50:18 2012 UTC
 # Author: 
 # Title: (unknown) - PCB BOM
 # Quantity, Description, Value, RefDes
 # --------------------------------------------
-2,"SO8","unknown",U1 U2 
+1,"SO8","LT1793",U1 
 1,"1206","1M",R1 
 1,"1206","1K",R2 
 1,"0805","6.65K",R3 
 1,"1206","100",R4 
-1,"TEMD6xxx","unknown",D1 
+1,"SO8","LF356",U2 
+1,"TEMD6xxx","TEMD6xxx",D1 
 4,"1210","100nF",C3 C2 C4 C5 
 2,"JUMPER12","unknown",CONN3 CONN2 
 1,"JUMPER8","unknown",CONN4 

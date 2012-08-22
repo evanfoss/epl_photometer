@@ -19,6 +19,8 @@ T 44200 44200 5 10 1 1 0 6 1
 refdes=D1
 T 44200 44000 5 10 1 1 0 6 1
 footprint=TEMD6xxx
+T 45000 43700 5 10 0 1 0 0 1
+value=TEMD6xxx
 }
 C 48100 48300 1 0 0 capacitor-1.sym
 {
@@ -80,6 +82,8 @@ T 49395 44505 5 10 1 1 180 6 1
 device=LT1793
 T 49400 44100 5 10 1 1 180 6 1
 footprint=SO8
+T 48400 45300 5 10 0 1 0 0 1
+value=LT1793
 }
 C 54000 44700 1 0 0 output-2.sym
 {

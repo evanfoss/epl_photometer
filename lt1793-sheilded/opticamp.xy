@@ -1,18 +1,18 @@
 # $Id$
 # PcbXY Version 1.0
-# Date: Wed Aug 22 19:00:27 2012 UTC
+# Date: Wed Aug 22 21:50:18 2012 UTC
 # Author: 
 # Title: (unknown) - PCB X-Y
 # RefDes, Description, Value, X, Y, rotation, top/bottom
 # X,Y in mil.  rotation in degrees.
 # --------------------------------------------
-U1,"SO8","unknown",915.00,2062.50,180,top
+U1,"SO8","LT1793",915.00,2062.50,180,top
 R1,"1206","1M",1090.00,2162.59,90,top
 R2,"1206","1K",1115.00,1820.00,90,top
 R3,"0805","6.65K",1115.00,1645.00,90,top
 R4,"1206","100",1115.00,1465.00,90,top
-U2,"SO8","unknown",915.00,1645.00,180,top
-D1,"TEMD6xxx","unknown",886.89,2300.01,90,top
+U2,"SO8","LF356",915.00,1645.00,180,top
+D1,"TEMD6xxx","TEMD6xxx",886.89,2300.01,90,top
 C3,"1210","100nF",670.00,1860.00,0,top
 C2,"1210","100nF",670.00,1445.00,0,top
 C4,"1210","100nF",670.00,2060.00,0,top
