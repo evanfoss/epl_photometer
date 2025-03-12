@@ -1,7 +1,9 @@
 # EPL Photometer
 
 By Evan Foss
+
 Date 2011.10.05 (YYYY.MM.DD)
+
 Documentation reuploaded 2025.03.12 by EEF
 
 ## Project Description
