@@ -73,6 +73,16 @@ Making the connector in SMT was considered but having the connector pins go thre
 
 To get from the connector on the photometer to the rest of the world there are two different methods. In a chamber the device uses a shielded cable carrying both the power and signal lines to an PCB with and edge card connector. The edge card supplies power from our standard EPL configuration of the EFP series vector subrack. The signal comes out of that same board via a right angle BNC connector. In the second configuration we use two shielded cables on going to a MiniHEX9 for power and the other to a BNC connector for the signal output. Because of the outside of the BNC cable being only at analog ground and not at shield potential this version is not suitable for use in a chamber.
 
+# Validation
+
+The photometer was tested for it's frequency reponse, noise floor, and linearity.
+
+<a href="lt1793-sheilded/photos/photometer-testing-with-the-electrostatic-shield-on_7128217557_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing-with-the-electrostatic-shield-on_7128217557_o.jpg"></a>
+
+For more on that testing data reach out to who ever has my lab notebook now.
+
+|<a href="lt1793-sheilded/photos/photometer-testing-generator-settings_6982148594_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing-generator-settings_6982148594_o.jpg"></a>|<a href="lt1793-sheilded/photos/photometer-testing--fall-time-testing_6982137116_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing--fall-time-testing_6982137116_o.jpg"></a>|<a href="lt1793-sheilded/photos/photometer-testing-rise-time_7128222353_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing-rise-time_7128222353_o.jpg"></a>|<a href="lt1793-sheilded/photos/dsci3647_6982131158_o.jpg"><img src="lt1793-sheilded/photos/dsci3647_6982131158_o.jpg"></a>
+
 # Future
 
 We only have to needs from this device that are unfulfilled. First we would like to be able calibrate it to a source of a known wavelength and power. Second it would be nice if it could have a better response at smaller wavelengths. Sadly we do not have the resources at this point but that may change later.
