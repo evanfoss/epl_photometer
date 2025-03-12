@@ -5,6 +5,7 @@ Date 2011.10.05 (YYYY.MM.DD)
 Documentation reuploaded 2025.03.12 by EEF
 
 ## Project Description
+
 This project is a photometer, unlike a conventional light meter it is designed to take readings of a stroboscopic light source. It is compact and shielded enough to put in a chamber and operate continuously. It is not meant for perfect for any application because of the limitations in it's response to specific wavelengths and in calibration. It is made with the best matched photodiodes available in our price range. It is also limited in that do to our inability to develop a good reference for single wavelength calibration the device is only good for qualitative (relative) measurements not quantitative measurements. We are working to rectify this last limitation but there is no telling how long it will take to find an adequate calibration method.
 
 # Development
@@ -26,6 +27,7 @@ The project was originally designed using gEDA but Lepton-EDA is backward compat
 For the math I was doing I suggest migrating off SageMath to <a href="https://octave.org/">Octave</a> as Sagemath maintence for work this simple is excessive.
 
 ## Organization
+
 4alberta		The files for the LT1793-sheilded version of the board.
 README.text		This file.
 datasheets		The data sheets for the various parts used/(considered for use) in the project.
