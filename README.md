@@ -81,6 +81,7 @@ The photometer was tested for it's frequency reponse, noise floor, and linearity
 
 For more on that testing data reach out to who ever has my lab notebook now.
 
+|Generator used|Fall Time|Rise Time|Linearity
 |:---------------|:---------------|:---------------|:---------------
 |<a href="lt1793-sheilded/photos/photometer-testing-generator-settings_6982148594_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing-generator-settings_6982148594_o.jpg"></a>|<a href="lt1793-sheilded/photos/photometer-testing--fall-time-testing_6982137116_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing--fall-time-testing_6982137116_o.jpg"></a>|<a href="lt1793-sheilded/photos/photometer-testing-rise-time_7128222353_o.jpg"><img src="lt1793-sheilded/photos/photometer-testing-rise-time_7128222353_o.jpg"></a>|<a href="lt1793-sheilded/photos/dsci3647_6982131158_o.jpg"><img src="lt1793-sheilded/photos/dsci3647_6982131158_o.jpg"></a>
 
