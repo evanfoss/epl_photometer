@@ -36,15 +36,24 @@ math			The scripts and calculations used for the design of the device.
 
 ## Design
 
+<a href="lt1793-sheilded/transimpedance.png"><img src="lt1793-sheilded/transimpedance.png"></a>
 The photometer uses a photodiode to convert illumination into an electrical current. The current is amplified by a transimpedance stage converting it to a voltage. The voltage is then amplified by a second amplifier that is also capable of driving the capacitive load from the BNC cable. Ideally all the gain would take place in one stage but that is not possible because of real world limitations on the size of the feedback resistor, input capacitance, amplifier stability and etc. More on this will be explained later.
 
 The input diode was selected because it had response in the relevant areas. Many diodes were considered but the TEMD6010FX1 was selected because it had some response in the shorter wavelengths and because it had relatively low capacitance. There were other diodes with more appropriate response but they were all unobtanium because of the minimum quantity required. To carry the project forward we have to assume some things about what the maximum and typical levels of illumination will be. With the amount of illumination the amount of current can be used to work out the required amount of gain for the rest of the device.
 
 The feedback resistor on the transimpedance stage is not large enough on it's own so a second stage is required. The LT1793 was chosen for the transimpedance stage because it has reasonably low input current bias and input current offset which are better for obvious reasons. The LT1793 also has a low input capacitance which is important for stability and just to finish off it has a reasonable gain band width product. For higher bandwidths the LTC6240 was considered but do not need the bandwidth yet. While it is possible to make a larger resistance it would not work because the minor capacitance across the pads of the resistors footprint will be large enough to limit total feedback impedance as frequency increases. While some feedback capacitance is good for compensating the amplifier the effect would be excess role off.
 
+<a href="lt1793-sheilded/cabledrive.png"><img src="lt1793-sheilded/cabledrive.png"></a>
+
 The second stage is really just meant to pick up the slack from the transimpedance stage and driving the capacitive load of the output cable. It is the ability to drive a capacitive load that is why the LF356 was selected over any number of otherwise comparable amplifiers. The input resistance for the LF356 was selected because it was a reasonable margin from the output current of the LT1793. The math included in the project also checks if there should be a feedback capacitor on the second stage amplifier. It is highly unlikely to be needed.
 
+<a href="lt1793-sheilded/hidden-magic.png"><img src="lt1793-sheilded/hidden-magic.png"></a>
+
+This is just the shielding for the device. Transimpedance amplifiers are very noise sensitive.
+
 # Construction
+
+<a href="lt1793-sheilded/opticamp.png.png"><img src="lt1793-sheilded/opticamp.png.png"></a>
 
 The construction of the photometer seems straight forward until you consider the troubles of making it compact with only 2 layers for cost reasons and only 1 layer used for the design because the bottom is going to be used as part of the shield. The whole design except for the connector and the shield is done in SMT. 
 
