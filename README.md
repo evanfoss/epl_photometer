@@ -53,7 +53,7 @@ This is just the shielding for the device. Transimpedance amplifiers are very no
 
 # Construction
 
-<a href="lt1793-sheilded/opticamp.png.png"><img src="lt1793-sheilded/opticamp.png.png"></a>
+<a href="lt1793-sheilded/opticamp-photo.pcb.png"><img src="lt1793-sheilded/opticamp-photo.pcb.png"></a>
 
 The construction of the photometer seems straight forward until you consider the troubles of making it compact with only 2 layers for cost reasons and only 1 layer used for the design because the bottom is going to be used as part of the shield. The whole design except for the connector and the shield is done in SMT. 
 
