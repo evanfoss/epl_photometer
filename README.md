@@ -28,13 +28,15 @@ For the math I was doing I suggest migrating off SageMath to <a href="https://oc
 
 ## Organization
 
-4alberta		The files for the LT1793-sheilded version of the board.
-README.text		This file.
-datasheets		The data sheets for the various parts used/(considered for use) in the project.
-lt1793-sheilded		The 1st production version of the device using an LT1793 for the transimpedance amplifier and a shield using 0.1" spaced headers.
-lt1793-unsheilded	The pre-production version of the device using an LT1793 for the transimpedance amplifier minus the shield.
-ltc6240			The pre-production version of the device using an LTC6240 for the transimpedance amplifier for higher frequency responce. This design is incomplete.
-math			The scripts and calculations used for the design of the device.
+|File Name/Directory            | Description
+|:---------------               |:---------------
+|4alberta	                    | The files for the LT1793-sheilded version of the board.
+|README.md		                | This file.
+|datasheets		                | The data sheets for the various parts used/(considered for use) in the project.
+|lt1793-sheilded		        | The 1st production version of the device using an LT1793 for the transimpedance amplifier and a shield using 0.1" spaced headers.
+|lt1793-unsheilded	            | The pre-production version of the device using an LT1793 for the transimpedance amplifier minus the shield.
+|ltc6240			            | The pre-production version of the device using an LTC6240 for the transimpedance amplifier for higher frequency responce. This design is incomplete.
+|math                           | The scripts and calculations used for the design of the device.
 
 ## Design
 
