@@ -43,7 +43,7 @@ MATHTOOL = sage
 MATHFLAGS = 
 #
 ## Schematic Capture
-SCHTOOL = gschem
+SCHTOOL = lepton-schematic
 SCHFLAGS = -q
 #
 ## Schematic Library
@@ -64,7 +64,7 @@ GRAPHTOOL_GNUPLOT = gnuplot
 GRAPHFLAGS_GNUPLOT = -persist
 #
 ## Schematic to PCB Tool
-SCH2PCBTOOL = gsch2pcb
+SCH2PCBTOOL = gsch2pcb-rnd
 # 
 ## PCB Tool
 PCBTOOL = pcb
